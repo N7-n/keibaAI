@@ -9,6 +9,10 @@ from sklearn import model_selection
 
 Xy=[]
 
+#####入力データ｜記入例→[['騎手名','馬齢','性別'],['騎手名','馬齢','性別'],・・・・・・]
+input_data = np.array([['横山和','3','牡']]) 
+
+
 #データベースに接続
 con = sqlite3.connect('database.sqlite3')
 cur = con.cursor()
@@ -44,14 +48,11 @@ y = Xy_encoded[:,0].astype(int)
 
 #print(X[0])
 #X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size=0.2, random_state=5) 
-classifier = svm.LinearSVC(max_iter=25000,random_state=0) 
+classifier = svm.LinearSVC(max_iter=30000,random_state=0) 
 classifier.fit(X, y)
 #y_test_pred = classifier.predict(X_test) 
-#f1 = model_selection.cross_val_score(classifier, X, y, scoring='f1_weighted', cv=3) 
-#print("F1 score: " + str(round(100*f1.mean(), 2)) + "%") 
-
-
-input_data = np.array([['横山和 ','3','牡']])                       
+f1 = model_selection.cross_val_score(classifier, X, y, scoring='f1_weighted', cv=3) 
+print("F1 score: " + str(round(100*f1.mean(), 2)) + "%")                       
 
 input_data_encoded = np.zeros(input_data.shape) 
 count = 0 

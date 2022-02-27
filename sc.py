@@ -48,7 +48,7 @@ for scraping_sitename in sitelist.SITE_URL:
         Jockey_Names_list = []
         for Jockey_Name in Jockey_Names:
 
-            Jockey_Name = Jockey_Name.get_text().lstrip().rstrip('\n').strip('☆').strip('△')
+            Jockey_Name = Jockey_Name.get_text().lstrip().rstrip('\n').strip('☆').strip('△').rstrip()
 
             Jockey_Names_list.append(Jockey_Name)
         

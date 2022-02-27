@@ -13,10 +13,6 @@
   <h5>・database.sqlite3  → データベースのファイルです。
   <h5>・sqlite3  → sqlite3をコマンドプロンプトで動かす為のファイルです
    
-   ###ads
-   -a
-   -a
-   -a
-   -a
+
     
   

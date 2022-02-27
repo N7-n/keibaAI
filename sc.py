@@ -43,7 +43,6 @@ for scraping_sitename in sitelist.SITE_URL:
 
             Horse_Names_list.append(Horse_Name)
 
-
         #騎手名取得
         Jockey_Names = soup.find_all('td', class_='Jockey')
         Jockey_Names_list = []
@@ -57,7 +56,7 @@ for scraping_sitename in sitelist.SITE_URL:
         Age = soup.find_all('span', class_='Lgt_Txt Txt_C')
         Age_list = []
         for Age in Age:
-            Age = Age.get_text().lstrip().rstrip('\n').strip('牡').strip('牝')
+            Age = Age.get_text().lstrip().rstrip('\n').strip('牡').strip('牝').strip('セ')
             Age_list.append(Age)
 
         #性別取得

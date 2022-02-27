@@ -13,8 +13,10 @@
   <h5>・database.sqlite3  → データベースのファイルです。
   <h5>・sqlite3  → sqlite3をコマンドプロンプトで動かす為のファイルです
 <h3>使用手順
-  <h5>1.__sitelist.py__にnetkeibaのレース結果画面のurlを書いてください
-  <h5>2.__sc.py__にnetkeibaのレース結果画面のurlを書いてください   
+  <h5>1. 「sitelist.py」にnetkeibaのレース結果画面のurlを書いてください
+  <h5>2. 「sc.py」を実行してデータベースにデータを格納してください
+  <h5>3. 「keibaAI.py」の入力データの部分に予想したい馬のデータを入れてください
+  <h5>4. 「keibaAI.py」を実行して結果を得てください 
    
 
     

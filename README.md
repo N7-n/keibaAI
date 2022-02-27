@@ -31,6 +31,10 @@
    ```
    python3 keibaAi.py
    ```
-
+   <h5>データベースの中身の削除
+    
+    ```
+    python3 delete.py
+    ```
     
   

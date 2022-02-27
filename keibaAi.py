@@ -34,7 +34,6 @@ cur.execute('SELECT rank,jockey,age,fm FROM data')
 for data in cur:
     Xy.append(data)
 
-
 Xy = np.array(Xy)
 
 

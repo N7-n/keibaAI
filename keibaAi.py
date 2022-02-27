@@ -7,11 +7,21 @@ from sklearn.svm import LinearSVC
 from sklearn.multiclass import OneVsOneClassifier 
 from sklearn import model_selection
 
+
+
 Xy=[]
+print('馬名を入力してください')
+name=input()
+
+print('騎手を入力してください')
+a=input()
+print('馬齢を入力してください')
+b=str(input())
+print('性別を入力してください')
+c=input()
 
 #####入力データ｜記入例→[['騎手名','馬齢','性別'],['騎手名','馬齢','性別'],・・・・・・]
-input_data = np.array([['横山和','3','牡']]) 
-
+input_data = np.array([[a,b,c]]) 
 
 #データベースに接続
 con = sqlite3.connect('database.sqlite3')
@@ -66,4 +76,5 @@ for i,item in enumerate(input_data[0]):
 V=input_data_encoded.astype(int)
 
 ppp=classifier.predict(V)
-print(ppp)
+print('-馬名-　 -3着以内-')
+print(name,'  　　 ',ppp)

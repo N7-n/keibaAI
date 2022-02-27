@@ -4,7 +4,7 @@
 <h2>使い方
 <h3>各ファイルについて
   <h5>・sc.py  → 競馬情報サイトからスクレイピングを行い,データベースに格納します
-  <h5>・sitelist.py  → sc.pyがどのURLからデータを取ってくるか記述する用(netkeibaのレース結果画面のURLを入れてください)
+  <h5>・sitelist.py  → sc.pyがどのURLからデータを取ってくるか記述する用(netkeibaのレース結果画面のURLを使用)
   <h5>・keibaAI  → データベースからデータを利用したSVMを用いた分類器です。
   <h5>・database.sqlite3  → データベースのファイルです。
   <h5>・sqlite3  → sqlite3をコマンドプロンプトで動かす為のファイルです
